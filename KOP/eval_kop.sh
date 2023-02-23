@@ -1,0 +1,9 @@
+#! /bin/bash
+#touch ./eval.txt
+./KOP_discrete.py 10
+./KOP_discrete.py 15
+./KOP_discrete.py 20
+./KOP_discrete.py 25
+./KOP_discrete.py 30
+./KOP_discrete.py 35
+./KOP_discrete.py 40
