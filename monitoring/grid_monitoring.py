@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import numpy as np
-import scipy as sp
 from itertools import combinations
 import do_mpc
 import ctypes
@@ -146,8 +145,8 @@ if __name__ == '__main__':
     for i in range(1200):
         u0 = mpc.make_step(x0)
         x0 = simulator.make_step(u0)
-        print("AVG reward: " + str(np.average(x0[:-8])))
-        avgs.append(np.average(x0[:-8]))
+        print("AVG reward: " + str(np.average(x0[:-m*4])))
+        avgs.append(np.average(x0[:-m*4]))
     print("AVG Overall reward: "+str(np.average(avgs)))
 
     sim_data = simulator.data

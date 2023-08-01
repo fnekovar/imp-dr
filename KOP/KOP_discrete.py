@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import numpy as np
-import scipy as sp
 import csv
 import ctypes
 import ctypes.util
@@ -107,8 +106,8 @@ if __name__ == '__main__':
     # mpc.bounds['upper', '_x', 'uav1_pos_y'] = width
     mpc.bounds['lower', '_x', 'uav1_vel_y'] = -vmax
     mpc.bounds['upper', '_x', 'uav1_vel_y'] = vmax
-    mpc.bounds['lower', '_u', 'uav1_acc_x'] = -amax
-    mpc.bounds['upper', '_u', 'uav1_acc_x'] = amax
+    mpc.bounds['lower', '_u', 'uav1_acc_y'] = -amax
+    mpc.bounds['upper', '_u', 'uav1_acc_y'] = amax
 
     uav1_vel_con = mpc.set_nl_cons('uav1_vel', uav1_vel_x**2+uav1_vel_y**2,vmax**2)
 
